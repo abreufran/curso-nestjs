@@ -1,4 +1,6 @@
 import { Injectable } from '@nestjs/common';
+import { CreatePostDto } from './dtos';
+import { EditPostDto } from './dtos/edit-post.dto';
 
 @Injectable()
 export class PostService {
@@ -10,11 +12,11 @@ export class PostService {
         return { ok: 'getOne'}
     }
 
-    createOne() {
+    createOne(dto: CreatePostDto) {
         return { ok: 'createOne'}
     }
 
-    editOne(id: number) {
+    editOne(id: number, dto: EditPostDto) {
         return { ok: 'editOne'}
     }
 

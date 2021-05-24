@@ -22,7 +22,7 @@ export class PostController {
     createOne(
         @Body() dto: CreatePostDto
     ){
-        return this.postService.createOne();
+        return this.postService.createOne(dto);
     }
 
     @Put(':id')
@@ -30,7 +30,7 @@ export class PostController {
         @Param('id', ParseIntPipe) id: number,
         @Body() dto: EditPostDto
     ){
-        return this.postService.editOne(id);
+        return this.postService.editOne(id, dto);
     }
 
     @Delete(':id')
