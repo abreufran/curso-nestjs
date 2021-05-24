@@ -22,6 +22,7 @@ export class PostController {
         return this.postService.getOne(id);
     }
 
+    
     @Post()
     createOne(
         @Body() dto: CreatePostDto

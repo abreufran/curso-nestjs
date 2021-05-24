@@ -1,3 +1,4 @@
+import { ApiProperty } from "@nestjs/swagger";
 import { IsArray, IsBoolean, IsEnum, IsString } from "class-validator";
 import { EnumToString } from "src/helpers/enumToString";
 import { PostCategory } from "../enums";
